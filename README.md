@@ -5,6 +5,6 @@ The website features a user-friendly interface that allows customers to easily n
 
 The LOB Website is built using HTML, CSS, JavaScript, making it a responsive website that works well on both desktop and mobile devices. It also includes various features such as a search bar, filter options, and a wishlist that allows customers to save their favorite items for future reference.
 
-If you're interested in contributing to the LOB Website, you can easily fork the repository and submit a pull request. The project is licensed under the MIT License, and any contributions are welcome.
+The LOB Website is open for contributions from the community. All contributions are welcome and will be reviewed by the LOB team before being merged.
 
 For any questions or concerns about the LOB Website, please feel free to reach out to us at info@lob.com.
