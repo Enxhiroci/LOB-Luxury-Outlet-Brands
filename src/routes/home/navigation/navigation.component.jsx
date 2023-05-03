@@ -3,6 +3,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 import { ReactComponent as LOBLogo } from '../../assets/lob.svg';
 import { ReactComponent as WISHLISTLogo } from '../../assets/wishlist.svg';
+import SignIn from '../../sign-in/sign-in.component';
 
 import './navigation.styles.scss';
 
@@ -20,12 +21,12 @@ const Navigation = () => {
           </Link>
 
           <Link className='nav-link' to='/sign-in'>
-            SIGN IN
+            Sign In
           </Link>
-
-          <Link className='nav-link-container' to='/'>
-          <WISHLISTLogo className='nav-link' to='/wishlist' />
-        </Link>
+          
+          <Link className='nav-link' to='/wishlist' >
+          <WISHLISTLogo ></WISHLISTLogo>
+       </Link>
         </div>
       </div>
       <Outlet />
