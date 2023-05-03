@@ -79,3 +79,9 @@
 .signup-link a {
   text-decoration: underline;
 }
+
+.form-container-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
