@@ -30,7 +30,6 @@ const AddtoCard = () => {
 };
 
 
-
 const App = () => {
   return (
     <Routes>

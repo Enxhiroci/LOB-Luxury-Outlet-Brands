@@ -1,14 +1,17 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
 import { ReactComponent as LOBLogo } from '../../assets/lob.svg';
 import { ReactComponent as WISHLISTLogo } from '../../assets/wishlist.svg';
 import { ReactComponent as ADDTOCARDLogo } from '../../assets/addtocard.svg';
 import SignIn from '../../sign-in/sign-in.component';
+import { UserContext } from '../../../contexts/user.context';
 
 import './navigation.styles.scss';
 
 const Navigation = () => {
+  const { currentUser } = useContext(UserContext);
+  console.log(currentUser)
 
   const [search, setSearch] = useState('');
 
@@ -26,14 +29,12 @@ const Navigation = () => {
         <Link className='logo-container' to='/'>
           <LOBLogo className='logo' />
         </Link>
-
         <div class="input-container">
   <input type="text" id="input" required=""/>
   <label for="input" class="label"></label>
         <button>
            Click
             </button>
-          
         </div>
 
         <div className='nav-links-container'>
@@ -51,6 +52,7 @@ const Navigation = () => {
        <Link className='nav-link' to='/addtocard' >
           <ADDTOCARDLogo ></ADDTOCARDLogo>
        </Link>
+       
         </div>
       </div>
       <Outlet />

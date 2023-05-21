@@ -24,13 +24,16 @@ const SignUp = () => {
             <input type="email" class="input" placeholder="Email" />
             <input type="password" class="input" placeholder="Password" />
           </div>
-          <button>Sign up</button>
+          <button class="submit" type="submit"> 
+          SIGN UP
+          </button>
       </form>
       <div class="form-section">
-        <p>Have an account? <a href="sign-in">Log in</a> </p>
+        <p>Have an account? <a href="sign-in">Sign in</a> </p>
       </div>
       </div>
-
+      
+       
   );
 };
 

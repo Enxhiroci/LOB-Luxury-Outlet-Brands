@@ -20,12 +20,12 @@ const Home = () => {
     },
     {
       id: 4,
-      title: 'womens',
+      title: 'women',
       imageUrl: 'https://images.selfridges.com/is/image/selfridges/230313_SS23-WW_HERO_SLIDER?wid=1367&fmt=jpg&fit=constrain&qlt=95,1',
     },
     {
       id: 5,
-      title: 'mens',
+      title: 'men',
       imageUrl: 'https://images.selfridges.com/is/image/selfridges/230313_SS23-MW_HERO_SLIDER?wid=1367&fmt=jpg&fit=constrain&qlt=95,1',
     },
     

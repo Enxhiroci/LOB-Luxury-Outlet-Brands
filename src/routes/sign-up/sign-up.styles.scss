@@ -67,7 +67,7 @@
 }
 
 /*Button*/
-.form button {
+.form button{
   background-color: #0066ff;
   color: #fff;
   border: 0;
@@ -76,8 +76,33 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
+.center {
+margin: auto;
+width: 50%;
+border: 3px;
+padding: 10px;
+text-align: center;
+border: 3px
+}
+.submit {
+  display: block;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  padding-left: 2.45rem;
+  padding-right: 2.45rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 800;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  position:sticky;
+}
+
 
 .form button:hover {
   background-color: #005ce6;
