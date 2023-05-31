@@ -1,0 +1,245 @@
+================================================================================================================
+Here we have datas that need to be inserted in the database
+================================================================================================================
+[
+    {
+      "id": 1,
+      "name": "Dolce & Gabbana",
+      "description":"Majolica-print cotton crop top ",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/04/42/43/20044243_45266489_1000.jpg",
+      "price": 495.00
+    },
+    {
+      "id": 2,
+      "name": "Hunza G ",
+      "description":"Pretty Woman cut-out minidress",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/17/14/54/57/17145457_37411591_480.jpg",
+      "price": 130.00
+    },
+    {
+      "id": 3,
+      "name": "NUDESTIX",
+      "description":"NUDIES Bloom all-over dewy face colour 7g",
+      "imageUrl": "https://images.selfridges.com/is/image/selfridges/R04154110_SWEETCHEEKS_M?$PDP_M_ZOOM$",
+      "price":30.00
+    },
+    {
+      "id": 4,
+      "name": "Balenciaga",
+      "description":"medium Beach raffia tote bag",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/64/76/45/19647645_50066420_1000.jpg",
+      "price": 1125
+    },
+    {
+      "id": 5,
+      "name": "Gucci",
+      "description":"GG-canvas lace-up sneakers",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/26/19/89/20261989_50210123_1000.jpg",
+      "price": 650
+    },
+    {
+      "id": 6,
+      "name": "Dsquared2",
+      "description":"logo-print cotton T-s",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/21/85/69/20218569_50200281_1000.jpg",
+      "price": 320
+    },
+    {
+      "id": 7,
+      "name": "Versace Kids",
+	"description":"for kids",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/36/62/14/19366214_44357969_1000.jpg",
+      "price": 118
+    },
+    {
+      "id": 8,
+      "name": "Gucci Beauty",
+      "description":"Palette de Beauté Quatuor",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/19/88/09/11/19880911_44894717_1000.jpg",
+      "price": 54
+    },
+    {
+      "id": 9,
+      "name": "Saint Laurent Eyewear",
+      "description":" oversized-shape frame sunglasses",
+      "imageUrl": "https://cdn-images.farfetch-contents.com/20/12/20/48/20122048_50056667_1000.jpg",
+      "price": 216
+    },
+    {
+        "id": 10,
+        "name": "Trudon",
+        "description":"Master Tseng Under A Sky Of Petals scented candle 800g",
+        "imageUrl": "https://images.selfridges.com/is/image/selfridges/R04133459_ALT01?$PDP_M_ZOOM$",
+        "price": 116
+      },
+      {
+        "id": 11,
+        "name": "Missoma",
+        "description":"Tunnel 18ct recycled yellow gold-platedbrass hoop earrings",
+        "imageUrl": "https://images.selfridges.com/is/image/selfridges/R04118494_GOLD_M?$PDP_M_ZOOM$",
+        "price": 145
+      },
+      {
+        "id": 12,
+        "name": "Valentino Garavani",
+        "description":"small Lòco Toile Iconographe shoulder bag",
+        "imageUrl": "https://cdn-images.farfetch-contents.com/19/47/48/94/19474894_43643899_1000.jpg",
+        "price": 1900
+      },
+      {
+        "id": 13,
+        "name": "Gucci",
+        "description":"110mm metallic leather sandals",
+        "imageUrl": "https://cdn-images.farfetch-contents.com/20/25/78/06/20257806_50202480_1000.jpg",
+        "price": 650
+      },
+      {
+        "id": 14,
+        "name": "Gucci",
+        "description":" Mac 80 low-top sneakers",
+        "imageUrl": "https://cdn-images.farfetch-contents.com/20/09/90/61/20099061_45171635_1000.jpg",
+        "price": 645
+      },
+      {
+        "id": 15,
+        "name": "Prada",
+        "description":"padded nappa leather mini bag",
+        "imageUrl": "https://cdn-images.farfetch-contents.com/19/66/40/35/19664035_43913036_1000.jpg",
+        "price": 1900
+      },
+      {
+        "id": 16,
+        "name": "Alexander McQueen",
+        "description":"asymmetric high-waisted skirt",
+        "imageUrl": "https://cdn-images.farfetch-contents.com/20/21/53/93/20215393_50195266_1000.jpg",
+        "price": 1190 
+      }
+  ]
+
+
+================================================================================================================
+Here we have datas that need to be inserted in the database
+================================================================================================================
+
+
+
+
+=======================================================================================================================
+Here we create the table
+=======================================================================================================================
+CREATE TABLE IF NOT EXISTS public."Test"
+(
+    id integer NOT NULL,
+    name character varying COLLATE pg_catalog."default" NOT NULL,
+    description character varying COLLATE pg_catalog."default" NOT NULL,
+    price integer NOT NULL,
+    "Url" character varying COLLATE pg_catalog."default" NOT NULL,
+    quantity integer NOT NULL,
+    category character varying COLLATE pg_catalog."default" NOT NULL,
+    size character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Test_pkey" PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Test"
+    OWNER to postgres;
+-----------------End Creation--------------------------------
+
+
+=======================================================================================================================
+
+=======================================================================================================================
+
+
+
+
+
+===================================================================================================================================================
+									Here We Enter The values
+====================================================================================================================================================
+
+	
+	INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (1,'Dolce & Gabbana','Majolica-print cotton crop top', 495.00,'https://cdn-images.farfetch-contents.com/20/04/42/43/20044243_45266489_1000.jpg', 6,'Women','Small');
+	
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (2,'Hunza G','Pretty Woman cut-out minidress', 130.00, '"https://cdn-images.farfetch-contents.com/17/14/54/57/17145457_37411591_480.jpg', 8,'Woman','Small');
+	
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (3,'NUDESTIX','NUDIES Bloom all-over dewy face colour 7g', 30.00,'https://images.selfridges.com/is/image/selfridges/R04154110_SWEETCHEEKS_M?$PDP_M_ZOOM$',20,'Beauty','Medium');
+	
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (4, 'Balenciaga','medium Beach raffia tote bag', 1125,'https://cdn-images.farfetch-contents.com/19/64/76/45/19647645_50066420_1000.jpg',2,'Woman','Large');
+	
+	
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (5,'Gucci','GG-canvas lace-up sneakers', 650,'https://cdn-images.farfetch-contents.com/20/26/19/89/20261989_50210123_1000.jpg', 4,'Men','Small');
+
+
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (6,'Dsquared2','logo-print cotton T-s', 320,'https://cdn-images.farfetch-contents.com/20/21/85/69/20218569_50200281_1000.jpg', 6,'Men','Medium');
+
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (7,'Versace Kids','for kids', 118,'https://cdn-images.farfetch-contents.com/19/36/62/14/19366214_44357969_1000.jpg', 21,'Kids','Large');
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (8,'Gucci Beauty','Palette de Beauté Quatuor', 54,'https://cdn-images.farfetch-contents.com/19/88/09/11/19880911_44894717_1000.jpg' ,8,'Beauty','Small');	
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (9,'Saint Laurent Eyewear','oversized-shape frame sunglasses',216, 'https://cdn-images.farfetch-contents.com/20/12/20/48/20122048_50056667_1000.jpg', 5,'Men','Small');
+	
+	INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (10,'Trudon','Master Tseng Under A Sky Of Petals scented candle 800g',116,'https://images.selfridges.com/is/image/selfridges/R04133459_ALT01?$PDP_M_ZOOM$', 7,'Life','Medium');
+	
+	INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (11,'Missoma','Tunnel 18ct recycled yellow gold-platedbrass hoop earrings', 145,'https://images.selfridges.com/is/image/selfridges/R04118494_GOLD_M?$PDP_M_ZOOM$', 6,'Woman','Medium');
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (12,'Valentino Garavani','small Lòco Toile Iconographe shoulder bag', 1900,'https://cdn-images.farfetch-contents.com/19/47/48/94/19474894_43643899_1000.jpg', 3,'Woman','Small');	
+
+
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (13,'Gucci','110mm metallic leather sandals', 650,'https://cdn-images.farfetch-contents.com/20/25/78/06/20257806_50202480_1000.jpg', 6,'Woman','Small');	
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (14,'Gucci', 'Mac 80 low-top sneakers', 645,'https://cdn-images.farfetch-contents.com/20/09/90/61/20099061_45171635_1000.jpg', 7,'Woman','Small');	
+	
+	
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (15, 'Prada','padded nappa leather mini bag', 1900,'https://cdn-images.farfetch-contents.com/19/66/40/35/19664035_43913036_1000.jpg', 8,'Woman','Small');	
+
+INSERT INTO public."Test"(
+	id, name, description, price, "Url", quantity, category, size)
+	VALUES (16,'Alexander McQueen','asymmetric high-waisted skirt',1190,'https://cdn-images.farfetch-contents.com/20/21/53/93/20215393_50195266_1000.jpg', 4,'Woman','Small');
+
+===================================================================================================================================================
+									End of Enter Values
+====================================================================================================================================================
+
+
+
+
+
+
+
+
+

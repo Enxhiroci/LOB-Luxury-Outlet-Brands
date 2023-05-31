@@ -1,0 +1,70 @@
+==========================================================
+Create Table For The Form
+========================================================
+
+CREATE TABLE IF NOT EXISTS public."FormIn"
+(
+    "Id" bigint NOT NULL DEFAULT nextval('"FormIn_Id_seq"'::regclass),
+    "FullName" character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "FormIn_pkey" PRIMARY KEY ("Id"),
+    CONSTRAINT email UNIQUE (email)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."FormIn"
+    OWNER to postgres;
+
+
+==========================================================
+End Create Table
+========================================================
+
+
+
+
+
+==========================================================
+Insert values==> "Id here is autoincremented by one every time create a new user( type bigInt)"
+========================================================
+
+INSERT INTO public."FormIn"(
+	"Id", "FullName", password, email)
+	VALUES (1, 'test test', 'test1234', 'test@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "Id","FullName", password, email)
+	VALUES ( 2,'test 2', 'test1234', 'test2@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 3', 'test1234','test4@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 4', 'test1234','test44@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 5', 'test1234','test5@gmail.com');
+	
+	INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 6', 'test1234','test6@gmail.com');
+	
+	INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 7', 'test1234','test7@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 8', 'test1234','test8@gmail.com');
+
+INSERT INTO public."FormIn"(
+	 "FullName", password, email)
+	VALUES ( 'test 9', 'test1234','test9@gmail.com');
+==========================================================
+End values
+========================================================
