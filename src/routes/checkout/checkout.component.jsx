@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "../../components/payment-form/payment-form.css";
 
 import {
   selectCartItems,
@@ -14,10 +15,21 @@ import {
   HeaderBlock,
   Total,
 } from "./checkout.styles";
+import { useCallback, useState } from "react";
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const onPayNowClicked = useCallback(() => {
+    setModalOpen(true);
+  }, [setModalOpen]);
+
+  const onOverlayClicked = useCallback(() => {
+    setModalOpen(false);
+  }, [setModalOpen]);
 
   return (
     <CheckoutContainer>
@@ -43,7 +55,9 @@ const Checkout = () => {
       ))}
       <Total>Total: ${cartTotal}</Total>
 
-      <PaymentForm />
+      <input type="button" className="purchase--btn" value="Pay Now" onClick={onPayNowClicked} />
+
+      {modalOpen && <PaymentForm onOverlayClicked={onOverlayClicked} />}
     </CheckoutContainer>
   );
 };
