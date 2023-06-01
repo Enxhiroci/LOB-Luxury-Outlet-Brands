@@ -10,19 +10,22 @@ import { store, persistor } from "./store/store";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 
 import "./index.scss";
+import { ProductsProvider } from "./context/products";
 
 const rootElement = document.getElementById("root");
 
 render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
-          <Elements stripe={stripePromise}>
-            <App />
-          </Elements>
-        </BrowserRouter>
-      </PersistGate>
+      <ProductsProvider>
+        <PersistGate loading={null} persistor={persistor}>
+          <BrowserRouter>
+            <Elements stripe={stripePromise}>
+              <App />
+            </Elements>
+          </BrowserRouter>
+        </PersistGate>
+      </ProductsProvider>
     </Provider>
   </React.StrictMode>,
   rootElement
